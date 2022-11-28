@@ -15,14 +15,12 @@ def seed_torch(seed=0):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
-
-# 使用简化的6层VGG模型进行patch层面分类和特征提取
 class VGG_liuyedao_ori_cnn_CEL(nn.Module):
     def __init__(self):
         super(VGG_liuyedao_ori_cnn_CEL,self).__init__()
         self.conv1a = nn.Sequential(
             nn.Conv2d(
-                in_channels=1,  # 灰色图像通道数是1
+                in_channels=1, 
                 out_channels=16,
                 kernel_size=5,
                 stride=1,
@@ -34,7 +32,7 @@ class VGG_liuyedao_ori_cnn_CEL(nn.Module):
             nn.Conv2d(16,32,5,1,2),
             nn.BatchNorm2d(32),
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2),  # 使用了一个2×2的最大池化
+            nn.MaxPool2d(kernel_size=2),  
         )
         self.conv2a = nn.Sequential(
             nn.Conv2d(32,64,3,1,1),
@@ -83,7 +81,6 @@ class VGG_liuyedao_ori_cnn_CEL(nn.Module):
         x = self.fc3(x)
         return x  # feature prob
 
-    # 输出patch特征，用于后续图节点特征的构建
     def feature(self, x):
         x = self.conv1a(x)
         x = self.conv1b(x)
