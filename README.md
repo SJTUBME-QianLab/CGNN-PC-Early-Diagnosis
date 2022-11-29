@@ -1,2 +1,2 @@
-# CGNN-PC-Early-Diagnosis
+# CGNN PC Early Diagnosis
 
