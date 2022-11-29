@@ -1,2 +1,2 @@
-# CGNN for early diagnosis of pancreatic cancer
+# CGNN-PC-Early-Diagnosis
 
