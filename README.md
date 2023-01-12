@@ -1,2 +1,0 @@
-# CGNN PC Early Diagnosis
-
