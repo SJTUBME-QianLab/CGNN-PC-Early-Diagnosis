@@ -1,4 +1,4 @@
-# Causality-Driven Graph Neural Network for Early Diagnosis of Pancreatic Cancer in Non-Contrast Computerized Tomography
+# CGNN-PC-Early-Diagnosis
 
 This repository holds the codes of the paper: 
 
